@@ -1,0 +1,2618 @@
+{
+  "type": "HoradricCubePanel",
+  "name": "HoradricCubeLayout",
+  "fields":
+  {
+    "priority": 10,
+    "rect": "$LeftPanelRect",
+    "anchor": "$LeftPanelAnchor"
+  },
+  "children":
+  [
+    {
+      "type": "ClickCatcherWidget",
+      "name": "click_catcher",
+      "fields":
+      {
+        "rect": "$PanelClickCatcherRect"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "background",
+      "fields":
+      {
+        "filename": "PANEL\\Horadric_Cube\\HoradricCube_BG"
+      }
+    },
+    {
+      "type": "ImageWidget",
+      "name": "LeftHinge",
+      "fields":
+      {
+        "rect": "$LeftHingeRect",
+        "filename": "$LeftHingeSprite"
+      }
+    },
+    {
+      "type": "TextBoxWidget",
+      "name": "title",
+      "fields":
+      {
+        "rect": "$InGamePanelTitleRect",
+        "style": "$StyleTitleBlock",
+        "text": "@box"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "convert",
+      "fields":
+      {
+        "rect":
+        {
+          "x": 520,
+          "y": 969
+        },
+        "filename": "PANEL\\Horadric_Cube\\TransmuteButton",
+        "tooltipString": "@strUiMenu2",
+        "hoveredFrame": 2,
+        "onClickMessage": "HoradricCubePanelMessage:Convert"
+      }
+    },
+    {
+      "type": "ButtonWidget",
+      "name": "close",
+      "fields":
+      {
+        "rect":
+        {
+          "x": 1075,
+          "y": 9
+        },
+        "filename": "PANEL\\closebtn_4x",
+        "hoveredFrame": 3,
+        "tooltipString": "@strClose",
+        "sound": "cursor_close_window_hd",
+        "onClickMessage": "HoradricCubePanelMessage:Close"
+      }
+    },
+    {
+      "type": "InventoryGridWidget",
+      "name": "grid",
+      "fields":
+      {
+        "rect":
+        {
+          "x": 431,
+          "y": 534
+        },
+        "cellCount":
+        {
+          "x": 3,
+          "y": 4
+        },
+        "cellSize": "$ItemCellSize",
+        "gemSocketFilename": "PANEL\\gemsocket"
+      }
+    },
+    {
+      "type": "AnimatedImageWidget",
+      "name": "flourish",
+      "fields":
+      {
+        "rect":
+        {
+          "x": 180,
+          "y": 204,
+          "scale": 2
+        },
+        "filename": "PANEL\\Horadric_Cube\\Flourish",
+        "blendMode": "black",
+        "fps": 14,
+        "playing": false,
+        "loop": false
+      }
+    },
+    {
+      "type": "Widget",
+      "name": "LeftWidget",
+      "fields":
+      {
+        "rect":
+        {
+          "x": 40,
+          "y": 400,
+          "scale": 0.8
+        }
+      },
+      "children":
+      [
+        {
+          "type": "Widget",
+          "name": "RuneUp2",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune2",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune2"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune1",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune1"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune1",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune1"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune1",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune1"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp3",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 65
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune3",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune3"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune2",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune2"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune2",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune2"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune2",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune2"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp4",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 130
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune4",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune4"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune3",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune3"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune3",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune3"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune3",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune3"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp5",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 195
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune5",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune5"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune4",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune4"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune4",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune4"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune4",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune4"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp6",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 260
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune6",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune6"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune5",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune5"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune5",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune5"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune5",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune5"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp7",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 325
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune7",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune7"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune6",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune6"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune6",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune6"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune6",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune6"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp8",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 390
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune8",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune8"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune7",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune7"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune7",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune7"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune7",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune7"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp9",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 455
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune9",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune9"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune8",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune8"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune8",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune8"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune8",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune8"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp10",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 520
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune10",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune10"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune9",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune9"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune9",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune9"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune9",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune9"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp11",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 585
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune11",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune11"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune10",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune10"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune10",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune10"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune10",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune10"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpForthItemRect",
+                "filename": "$FileChippedTopaz",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipChippedTopaz"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp12",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 650
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune12",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune12"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune11",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune11"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune11",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune11"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune11",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune11"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpForthItemRect",
+                "filename": "$FileChippedAmethyst",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipChippedAmethyst"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp13",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 715
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune13",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune13"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune12",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune12"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune12",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune12"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune12",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune12"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpForthItemRect",
+                "filename": "$FileChippedSapphire",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipChippedSapphire"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp14",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 780
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune14",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune14"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune13",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune13"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune13",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune13"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune13",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune13"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpForthItemRect",
+                "filename": "$FileChippedRuby",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipChippedRuby"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp15",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 845
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune15",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune15"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune14",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune14"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune14",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune14"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune14",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune14"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpForthItemRect",
+                "filename": "$FileChippedEmerald",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipChippedEmerald"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp16",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 910
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune16",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune16"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune15",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune15"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune15",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune15"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune15",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune15"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpForthItemRect",
+                "filename": "$FileChippedDiamond",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipChippedDiamond"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp17",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 975
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune17",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune17"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune16",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune16"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune16",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune16"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune16",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune16"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpForthItemRect",
+                "filename": "$FileFlawedTopaz",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipFlawedTopaz"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Widget",
+      "name": "LeftWidget",
+      "fields":
+      {
+        "rect":
+        {
+          "x": 820,
+          "y": 400,
+          "scale": 0.8
+        }
+      },
+      "children":
+      [
+        {
+          "type": "Widget",
+          "name": "RuneUp18",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune18",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune18"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune17",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune17"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune17",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune17"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune17",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune17"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpForthItemRect",
+                "filename": "$FileFlawedAmethyst",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipFlawedAmethyst"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp19",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 65
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune19",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune19"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune18",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune18"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune18",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune18"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune18",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune18"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpForthItemRect",
+                "filename": "$FileFlawedSapphire",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipFlawedSapphire"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp20",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 130
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune20",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune20"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune19",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune19"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune19",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune19"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune19",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune19"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpForthItemRect",
+                "filename": "$FileFlawedRuby",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipFlawedRuby"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp21",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 195
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune21",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune21"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune20",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune20"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune20",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune20"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRune20",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune20"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpForthItemRect",
+                "filename": "$FileFlawedEmerald",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipFlawedEmerald"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp22",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 260
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune22",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune22"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune21",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune21"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune21",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune21"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileFlawedDiamond",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipFlawedDiamond"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp23",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 325
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune23",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune23"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune22",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune22"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune22",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune22"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileTopaz",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipTopaz"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp24",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 390
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune24",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune24"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune23",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune23"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune23",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune23"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileAmethyst",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipAmethyst"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp25",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 455
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune25",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune25"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune24",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune24"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune24",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune24"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileSapphire",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipSapphire"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp26",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 520
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune26",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune26"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune25",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune25"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune25",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune25"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileRuby",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRuby"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp27",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 585
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune27",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune27"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune26",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune26"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune26",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune26"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileEmerald",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipEmerald"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp28",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 650
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune28",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune28"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune27",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune27"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune27",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune27"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileDiamond",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipDiamond"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp29",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 715
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune29",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune29"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune28",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune28"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune28",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune28"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileFlawlessTopaz",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipFlawlessTopaz"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp30",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 780
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune30",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune30"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune29",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune29"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune29",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune29"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileFlawlessAmethyst",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipFlawlessAmethyst"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp31",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 845
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune31",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune31"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune30",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune30"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune30",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune30"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileFlawlessSapphire",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipFlawlessSapphire"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp32",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 910
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune32",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune32"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune31",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune31"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune31",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune31"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileFlawlessRuby",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipFlawlessRuby"
+              }
+            }
+          ]
+        },
+        {
+          "type": "Widget",
+          "name": "RuneUp33",
+          "fields":
+          {
+            "rect":
+            {
+              "x": 0,
+              "y": 975
+            }
+          },
+          "children":
+          [
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpWidgetRect",
+                "filename": "$FileRune33",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune33"
+              }
+            },
+            {
+              "type": "TextBoxWidget",
+              "name": "EqualText",
+              "fields":
+              {
+                "rect": "$RuneUpEqualTextBoxWidgetRect",
+                "text": "=",
+                "style": "$EqualTextBoxWidgetStyle"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpFirstItemRect",
+                "filename": "$FileRune32",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune32"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpSecondItemRect",
+                "filename": "$FileRune32",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipRune32"
+              }
+            },
+            {
+              "type": "ButtonWidget",
+              "name": "Rune",
+              "fields":
+              {
+                "rect": "$RuneUpThirdItemRect",
+                "filename": "$FileFlawlessEmerald",
+                "hoveredFrame": 0,
+                "pressedFrame": 0,
+                "tooltipString": "$TooltipFlawlessEmerald"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
